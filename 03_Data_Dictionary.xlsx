@@ -1,0 +1,121 @@
+Sheet 1 – Customers
+
+| Column Name     | Data Type | Description                |
+| --------------- | --------- | -------------------------- |
+| customer_id     | INTEGER   | Unique customer identifier |
+| customer_code   | VARCHAR   | Customer code              |
+| first_name      | VARCHAR   | Customer first name        |
+| last_name       | VARCHAR   | Customer last name         |
+| gender          | VARCHAR   | Gender                     |
+| date_of_birth   | DATE      | Customer DOB               |
+| email           | VARCHAR   | Email address              |
+| phone           | VARCHAR   | Mobile number              |
+| city            | VARCHAR   | Customer city              |
+| state           | VARCHAR   | Customer state             |
+| annual_income   | DECIMAL   | Annual income              |
+| credit_score    | INTEGER   | Credit score               |
+| join_date       | DATE      | Customer joining date      |
+| customer_status | VARCHAR   | Active / Inactive          |
+
+Sheet 2 – Accounts
+
+| Column Name           | Data Type | Description           |
+| --------------------- | --------- | --------------------- |
+| account_id            | INTEGER   | Unique account ID     |
+| account_number        | VARCHAR   | Bank account number   |
+| customer_id           | INTEGER   | Customer ID           |
+| branch_id             | INTEGER   | Branch ID             |
+| account_type_id       | INTEGER   | Account type          |
+| balance               | DECIMAL   | Current balance       |
+| open_date             | DATE      | Account opening date  |
+| account_status        | VARCHAR   | Active / Closed       |
+| last_transaction_date | DATE      | Last transaction date |
+
+Sheet 3 – Transactions
+
+| Column Name      | Data Type | Description                        |
+| ---------------- | --------- | ---------------------------------- |
+| transaction_id   | INTEGER   | Transaction ID                     |
+| account_id       | INTEGER   | Account ID                         |
+| merchant_id      | INTEGER   | Merchant ID                        |
+| transaction_date | TIMESTAMP | Transaction date                   |
+| transaction_type | VARCHAR   | Deposit, Withdrawal, Transfer etc. |
+| amount           | DECIMAL   | Transaction amount                 |
+| status           | VARCHAR   | Success, Failed, Pending           |
+| channel          | VARCHAR   | UPI, ATM, POS, NEFT, IMPS          |
+| device_type      | VARCHAR   | Mobile, ATM, Desktop etc.          |
+| is_international | BOOLEAN   | International transaction flag     |
+| transaction_city | VARCHAR   | Transaction city                   |
+| currency         | VARCHAR   | Transaction currency               |
+
+
+Sheet 4 – Loans
+
+| Column Name         | Data Type | Description                 |
+| ------------------- | --------- | --------------------------- |
+| loan_id             | INTEGER   | Loan ID                     |
+| customer_id         | INTEGER   | Customer ID                 |
+| loan_type_id        | INTEGER   | Loan type                   |
+| loan_amount         | DECIMAL   | Loan amount                 |
+| interest_rate       | DECIMAL   | Interest rate               |
+| tenure_months       | INTEGER   | Loan tenure                 |
+| emi_amount          | DECIMAL   | EMI                         |
+| loan_start_date     | DATE      | Loan start                  |
+| loan_end_date       | DATE      | Loan end                    |
+| default_flag        | BOOLEAN   | Loan default flag           |
+| loan_status         | VARCHAR   | Active / Closed / Defaulted |
+| remaining_balance   | DECIMAL   | Remaining balance           |
+| outstanding_balance | DECIMAL   | Outstanding amount          |
+| last_payment_date   | DATE      | Last payment                |
+
+
+Sheet 5 – Branches
+
+| Column Name    | Data Type | Description    |
+| -------------- | --------- | -------------- |
+| branch_id      | INTEGER   | Branch ID      |
+| branch_code    | VARCHAR   | Branch code    |
+| branch_name    | VARCHAR   | Branch name    |
+| city           | VARCHAR   | Branch city    |
+| state          | VARCHAR   | Branch state   |
+| manager_name   | VARCHAR   | Branch manager |
+| employee_count | INTEGER   | Employees      |
+| opening_date   | DATE      | Opening date   |
+| region         | VARCHAR   | Bank region    |
+
+Sheet 6 – Merchants
+
+| Column Name       | Data Type | Description       |
+| ----------------- | --------- | ----------------- |
+| merchant_id       | INTEGER   | Merchant ID       |
+| merchant_name     | VARCHAR   | Merchant name     |
+| merchant_category | VARCHAR   | Merchant category |
+| city              | VARCHAR   | Merchant city     |
+| state             | VARCHAR   | Merchant state    |
+
+Sheet 7 – Master Tables
+
+| Column            | Description                             |
+| ----------------- | --------------------------------------- |
+| account_type_id   | Account Type ID                         |
+| account_type_name | Savings, Current, Salary, Fixed Deposit |
+
+
+Loan Types
+
+| Column         | Description                                                       |
+| -------------- | ----------------------------------------------------------------- |
+| loan_type_id   | Loan Type ID                                                      |
+| loan_type_name | Home Loan, Personal Loan, Car Loan, Education Loan, Business Loan |
+
+
+
+
+| Table | Column | Data Type | Description |
+| ----- | ------ | --------- | ----------- |
+| Table     | Column      | Type    | Description   |
+| --------- | ----------- | ------- | ------------- |
+| Customers | customer_id | SERIAL  | Customer ID   |
+| Customers | full_name   | VARCHAR | Customer Name |
+| Customers | city        | VARCHAR | Customer City |
+
